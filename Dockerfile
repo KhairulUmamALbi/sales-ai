@@ -80,4 +80,4 @@ COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["frankenphp", "run", "--port=7000", "--workers=4"]
+CMD ["frankenphp", "php-server", "--listen", ":7000", "--root", "/var/www/public"]

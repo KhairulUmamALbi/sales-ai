@@ -38,7 +38,8 @@ php artisan route:cache
 php artisan view:cache
 
 # Storage symlink (safe to re-run)
-php artisan storage:link 2>/dev/null || true
+php artisan storage:link --force 2>/dev/null || true
+
 
 echo "✅ Ready! Starting FrankenPHP..."
 
